@@ -1,0 +1,42 @@
+1. Conda Environment erstellen und Libs installieren
+
+conda create --name mll python=3.11 -y
+
+conda activate mll
+
+conda install -c conda-forge numpy pandas matplotlib seaborn scikit-learn xgboost lightgbm missingno shap ipykernel -y
+
+
+
+conda install pytorch torchvision -c pytorch
+
+
+
+2. Kernel für Jupyter registrieren
+
+python -m ipykernel install --user --name mll --display-name "Python (mll)"
+
+cd WORKSPACE/THI/MLL (beliebiger Arbeitsordner)
+
+code .
+
+
+
+3. VS Code: Extension installieren
+
+In VS Code nach Extension "Jupyter" suchen und offizielles Plug-In von MS installieren (oftmals auch schon vorinstalliert)
+
+
+
+4. Notebook in VS Code einrichten und starten
+
+- Neue .ipynb Datei erstellen (z.B. test.ipynb)
+
+- oben rechts im Notebook-Fenster auf Kernel auswählen → Juypter Kernel → "Python (mll)"
+
+- Im ersten Block Installation testen mit (ggf. einmal speichern und VSCode schließen):
+  
+  import pandas as pd
+  import sklearn
+  import xgboost as xgb
+  print("Alles erfolgreich geladen!")
